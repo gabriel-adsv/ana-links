@@ -178,7 +178,7 @@ ul li a .icons {
 }
 
 ul li a span {
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -217,10 +217,6 @@ footer a {
 
   ul li a {
     width: 50vw;
-  }
-  
-  ul li a span {
-    font-size: 16px;
   }
 }
 
