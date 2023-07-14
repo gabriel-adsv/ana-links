@@ -9,7 +9,7 @@
   --bg-color: linear-gradient(90deg, rgba(89,16,42,1) 10%, rgba(111,20,52,0.8) 50%, rgba(111,20,52,1) 85%);
   --stroke-color: rgb(237, 171, 195);
   --surface-color: rgba(255, 255, 255, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --surface-color-hover: rgba(111,20,52,1) 85%;
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(assets/moon-stars.svg);
 }
@@ -19,33 +19,9 @@
   --bg-color: linear-gradient(90deg, rgb(251, 194, 188) 10%, rgba(251,194,188,0.8) 50%, rgba(251,194,188,1) 85%);
   --stroke-color: rgb(215, 51, 108);
   --surface-color: rgba(0, 0, 0, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --surface-color-hover: rgb(248, 182, 174) 85%;
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(assets/sun.svg);
-}
-
-.fundo-video {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-.fundo-video .video {
-  height: 100vh;
-}
-
-.fundo-video::after {
-  content: "";
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--bg-color);
 }
 
 body {
@@ -188,6 +164,9 @@ ul li a span {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
+
+  transform: scale(1.1);
+  transition: 200ms;
 }
 
 /* rodapé */
@@ -211,10 +190,6 @@ footer a {
 
 /* media queries */
 @media (min-width: 450px) {
-  .fundo-video .video {
-    width: 100%;
-  }
-
   ul li a {
     width: 50vw;
   }
